@@ -6,10 +6,10 @@ class Message:
     Inclui informações para o multicast confiável e o Relógio de Lamport.
     """
     def __init__(self, sender_id: str, message_content: str, lamport_timestamp: int, message_id: str):
-        self.sender_id = sender_id          # ID do processo que enviou a mensagem
-        self.message_content = message_content # Conteúdo da mensagem (ex: "Olá mundo!")
-        self.lamport_timestamp = lamport_timestamp # Valor do Relógio de Lamport do remetente
-        self.message_id = message_id        # ID único da mensagem para confiabilidade
+        self.sender_id = sender_id          
+        self.message_content = message_content 
+        self.lamport_timestamp = lamport_timestamp 
+        self.message_id = message_id        
 
     def to_json(self) -> str:
         """Serializa o objeto Message para uma string JSON."""
